@@ -33,8 +33,7 @@ import {Card,CardImg,CardImgOverlay,CardTitle} from 'reactstrap';
            <div className="row">
               {menu}
            </div>
-
-          </div>
+         </div>
        );
       }
 
