@@ -27,6 +27,7 @@ class CommentForm extends Component
 
   handleSubmit=(values)=>{
     this.toggleModal();
+    // this.props.postComment(this.props.dishId,values.rating,values.author,values.comment);
      console.log("Current State is :" + JSON.stringify(values));
       alert("Current State is:" + JSON.stringify(values));
   };
@@ -45,7 +46,7 @@ class CommentForm extends Component
       <Row className="form-group">
       <Label htmlFor="rating" md={12}> Rating </Label>
       <Col md={12}>
-      <Control.select model=".rating" className="form-control">
+      <Control.select model=".rating" name="rating" className="form-control">
       <option>1</option>
       <option>2</option>
       <option>3</option>
@@ -87,13 +88,7 @@ class CommentForm extends Component
       </Modal>
       </div>
       </div>
-// <Form onSubmit={this.handleSubmit}>
-      // <FormGroup>
-      // <Label htmlFor="username">Username</Label>
-      // <Input type="text" id="username" name="username"
-      //    innerRef={(input) => this.username = input} />
-      // </FormGroup>
-      // </Form>
+
     );
   }
 
@@ -136,7 +131,7 @@ class CommentForm extends Component
           <div>
           <h4> Comments : </h4>
           {commentsList}
-          <CommentForm dishId={dishId}/>
+          <CommentForm dishId={dishId} />
           </div>
         );
     }
