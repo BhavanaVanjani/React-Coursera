@@ -3,6 +3,7 @@ import {Card,CardImg,CardText,CardBody,CardTitle,Breadcrumb,BreadcrumbItem,Butto
 import {Control,LocalForm,Errors} from 'react-redux-form';
 import {Link} from 'react-router-dom';
 import {Loading} from './LoadingComponent';
+import {baseUrl} from '../shared/baseUrl';
 
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !(val) || (val.length <= len)
@@ -38,7 +39,7 @@ class CommentForm extends Component
       <div className="container">
       <div className="ml-0">
       <Button outline onClick={this.toggleModal}>
-      <span class="fa fa-pencil fa-lg"></span> Submit Comment
+      <span className="fa fa-pencil fa-lg"></span> Submit Comment
       </Button>
       <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
       <ModalHeader toggle={this.toggleModal}>Submit Comment</ModalHeader>
@@ -99,7 +100,7 @@ class CommentForm extends Component
      if(dish!= null){
        return(
    <Card key={dish.id}>
-   <CardImg width="100%" src={dish.image} alt={dish.name}/>
+   <CardImg width="100%" src={baseUrl + dish.image} alt={dish.name}/>
       <CardBody>
       <CardTitle>{dish.name}</CardTitle>
       <CardText> {dish.description}</CardText>
