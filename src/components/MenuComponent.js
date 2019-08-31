@@ -12,7 +12,7 @@ import {baseUrl} from '../shared/baseUrl';
   //   console.log('Menu Component componentDidMount invoked');
   // }
       //console.log('Menu component render is invoked');
-      function RenderMenuItem({ dish , onclick }){
+      function RenderMenuItem({ dish , onClick }){
         return(
           <Card onclick>
           <Link to={`/menu/${dish.id}`}>
@@ -52,8 +52,8 @@ import {baseUrl} from '../shared/baseUrl';
              </div>
          );
         }
-        
-        else 
+
+        else
           return(
               <div className="container">
               <div className="row">
