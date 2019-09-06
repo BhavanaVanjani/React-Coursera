@@ -11,7 +11,6 @@ import {baseUrl} from '../shared/baseUrl';
   // componentDidMount(){
   //   console.log('Menu Component componentDidMount invoked');
   // }
-      //console.log('Menu component render is invoked');
       function RenderMenuItem({ dish , onClick }){
         return(
           <Card onclick>
